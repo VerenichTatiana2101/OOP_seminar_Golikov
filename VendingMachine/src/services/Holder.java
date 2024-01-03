@@ -10,7 +10,7 @@ public class Holder {
         // новый массив спиралек автомата
         places = new ArrayList<>(xSize * ySize);
         for (int x = 0; x < xSize; x++) {
-            for (int y = 0; x < ySize; y++) {
+            for (int y = 0; y < ySize; y++) {
                 // проходит все ячейки и кладёт туда новый
                 // экземпляр класса (объект класса)
                 places.add(new Places(x, y));

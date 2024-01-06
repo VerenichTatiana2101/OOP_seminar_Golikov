@@ -7,7 +7,7 @@ public abstract class Motor implements IStartEngine {
 
     @Override
     public void StartEngine() {
-        // TODO Auto-generated method stub
+        System.out.println("is sarted");
         
     }
     

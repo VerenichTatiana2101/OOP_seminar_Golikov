@@ -4,7 +4,7 @@ public class GasEngine extends Motor {
 
     @Override
     public void StartEngine() {
-        // TODO Auto-generated method stub
+        System.out.println("is sarted");
         throw new UnsupportedOperationException("Unimplemented method 'Start'");
     }
     

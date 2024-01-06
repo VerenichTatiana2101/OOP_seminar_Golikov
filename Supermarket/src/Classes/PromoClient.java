@@ -1,26 +1,47 @@
 package Supermarket.src.Classes;
 
-public class SpecialClient extends Actor{
+public class PromoClient extends Actor {
+    private String namePromo;
+    private int idPromoClient;
+    static int countPromo;
 
-    private int idVip;
-
-    public SpecialClient(String name, int id) {
+    public PromoClient(String name, String namePromo) {
         super(name);
-        this.idVip = id;
+        this.namePromo = namePromo;
     }
 
-    public int getIdVip() {
-        return idVip;
+    @Override
+    public Actor getActor() {
+        return this; // return this возвращает ссылку на самого себя
+    }
+
+    public String getNamePromo() {
+        return namePromo;
+    }
+
+    public void setNamePromo(String namePromo) {
+        this.namePromo = namePromo;
+    }
+
+    public int getIdPromoClient() {
+        return idPromoClient;
+    }
+
+    public void setIdPromoClient(int idPromoClient) {
+        this.idPromoClient = idPromoClient;
+    }
+
+    public static int getCountPromo() {
+        return countPromo;
+    }
+
+    public static void setCountPromo(int countPromo) {
+        PromoClient.countPromo = countPromo;
     }
 
     @Override
     public String getName() {
         return super.name;
-    }
-
-    @Override
-    public Actor getActor() {
-        return this;  //return this возвращает ссылку на самого себя
     }
 
     @Override
@@ -49,7 +70,7 @@ public class SpecialClient extends Actor{
         return super.isMakeReturnOrder;
     }
 
-    /* переопределение метода забрал ли деньги покупатель*/
+    /* переопределение метода забрал ли деньги покупатель */
     @Override
     public boolean isTakeCash() {
         return super.isTakeCash;
@@ -67,5 +88,4 @@ public class SpecialClient extends Actor{
         super.isTakeCash = takeCash;
     }
 
-    
 }

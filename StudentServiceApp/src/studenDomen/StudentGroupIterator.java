@@ -25,10 +25,10 @@ public class StudentGroupIterator implements Iterator<Student> {
 
     @Override
     public Student next() {
-        if (!hasNext()){
+        if (!hasNext()) {
             return null;
-        } 
-        //counter ++;
+        }
+        // counter ++;
         return students.get(counter++);
     }
 

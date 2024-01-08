@@ -1,4 +1,4 @@
-package studenDomen;
+package studentDomen;
 
 public class User {
     private String firstName;

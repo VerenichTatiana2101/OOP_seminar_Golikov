@@ -1,4 +1,4 @@
-package studenDomen;
+package studentDomen;
 
 import java.util.Iterator;
 import java.util.List;

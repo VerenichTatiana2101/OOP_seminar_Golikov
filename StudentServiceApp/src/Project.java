@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
-import studenDomen.Student;
-import studenDomen.StudentGroup;
-import studenDomen.Teacher;
-import studenDomen.User;
+import studentDomen.Student;
+import studentDomen.StudentGroup;
+import studentDomen.Teacher;
+import studentDomen.User;
 
 public class Project {
     public static void main(String[] args) {

@@ -23,27 +23,27 @@ public class StudentGroup implements Iterable<Student> {
     // но сначала создаём класс StudentGroupIterator
     @Override
     public Iterator<Student> iterator() {
-    return new StudentGroupIterator(students);
+        return new StudentGroupIterator(students);
     }
 
     // или анонимный метод
     // @Override
     // public Iterator<Student> iterator() {
-    //     return new Iterator<Student>() {
-    //         private int index = 0;
-    //         @Override
-    //         public boolean hasNext() {
-    //             return index < students.size();
-    //         }
+    // return new Iterator<Student>() {
+    // private int index = 0;
+    // @Override
+    // public boolean hasNext() {
+    // return index < students.size();
+    // }
 
-    //         @Override
-    //         public Student next() {
-    //             if (!hasNext()) {
-    //                 return null;
-    //             }
-    //             return students.get(index++);
-    //         }
-    //     };
+    // @Override
+    // public Student next() {
+    // if (!hasNext()) {
+    // return null;
+    // }
+    // return students.get(index++);
+    // }
+    // };
     // }
 
 }

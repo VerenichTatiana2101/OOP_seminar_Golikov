@@ -31,31 +31,31 @@ public class Student extends User implements Comparable<Student> {
     // если в классе то this
     @Override
     public int compareTo(Student o) {
-    if (super.getAge() == o.getAge()) {
-    return 0;
-    }
-    if (super.getAge() > o.getAge()) {
-    return 1;
-    }
-    return -1;
+        if (super.getAge() == o.getAge()) {
+            return 0;
+        }
+        if (super.getAge() > o.getAge()) {
+            return 1;
+        }
+        return -1;
     }
 
     // // сортировка сначала по возрасту потом по id
     // @Override
     // public int compareTo(Student o) {
-    //     if (super.getAge() == o.getAge()) {
-    //         if (this.id == o.id) {
-    //             return 0;
-    //         }
-    //         if (this.id < o.id) {
-    //             return -1;
-    //         }
-    //         return 1;
-    //     }
-    //     if (super.getAge() > o.getAge()) {
-    //         return 1;
-    //     }
-    //     return -1;
+    // if (super.getAge() == o.getAge()) {
+    // if (this.id == o.id) {
+    // return 0;
+    // }
+    // if (this.id < o.id) {
+    // return -1;
+    // }
+    // return 1;
+    // }
+    // if (super.getAge() > o.getAge()) {
+    // return 1;
+    // }
+    // return -1;
     // }
 
 }

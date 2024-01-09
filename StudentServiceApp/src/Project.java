@@ -40,13 +40,13 @@ public class Project {
         Student st1 = new Student("Petya", "Perov", 23);
         Student st2 = new Student("Sergey", "Sergeevich", 25);
         Student st3 = new Student("Anna", "Sergeevna", 25);
-        //Student st4 = new Student("Andreevich", "Katia", 30);
+        // Student st4 = new Student("Andreevich", "Katia", 30);
 
         List<Student> studList2 = new ArrayList<Student>();
         studList2.add(st1);
         studList2.add(st2);
         studList2.add(st3);
-        //studList2.add(st4);
+        // studList2.add(st4);
         StudentGroup group2 = new StudentGroup(220, studList2);
         StudentGroup group3 = new StudentGroup(320, studList2);
         ////////////////////////////
@@ -58,18 +58,16 @@ public class Project {
         StudentSteam steam = new StudentSteam(5, stGr);
         // System.out.println("------- до сортировки------");
         // for (StudentGroup students : steam) {
-        //     System.out.println(students);
+        // System.out.println(students);
         // }
         Collections.sort(steam.getStudSteam());
 
         // System.out.println("------- после сортировки------");
         // for (StudentGroup students : steam) {
-        //     System.out.println(students);
+        // System.out.println(students);
         // }
 
         System.out.println(steam.toString());
-
-        
 
     }
 }

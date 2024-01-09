@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import studentDomen.Student;
@@ -22,8 +23,13 @@ public class Project {
         studList.add(us5);
         studList.add(us6);
 
+        System.out.println(us3);
         StudentGroup group = new StudentGroup(studList);
 
+        //получить студентов в виде коллекции
+        Collections.sort(group.getStudents());
+
+        System.out.println("-------------- after sorting by age --------------");
         for (Student student : group) {
             System.out.println(student);
         }

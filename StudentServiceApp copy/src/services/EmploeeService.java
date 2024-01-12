@@ -23,8 +23,10 @@ public class EmploeeService implements iPersonService<Emploee> {
     @Override
     public void create(String firstName, String lastName, int age) {
         Emploee pers = new Emploee(count, firstName, lastName, age);
-        // подставляем count чтобы при каждой регистрации студента
-        // id автоматически увеличивалось на 1
+        /*
+         * подставляем count чтобы при каждой регистрации студента
+         * id автоматически увеличивалось на 1
+         */
         count++;
         // после создания добавляем в общий список студентов б.данных
         emploeeList.add(pers);

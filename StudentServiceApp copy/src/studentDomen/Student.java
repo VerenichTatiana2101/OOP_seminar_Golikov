@@ -24,9 +24,11 @@ public class Student extends User implements Comparable<Student> {
                 + "', Age=" + super.getAge() + "}\n";
     }
 
-    /// сортировка по возрасту
-    // super т.к у родителя поле,
-    // если в классе то this
+    /*
+     * сортировка по возрасту
+     * super т.к у родителя поле,
+     * если в классе то this
+     */
     @Override
     public int compareTo(Student o) {
         if (super.getAge() == o.getAge()) {

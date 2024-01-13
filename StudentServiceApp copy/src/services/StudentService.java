@@ -3,7 +3,7 @@ package services;
 import java.util.ArrayList;
 import java.util.List;
 
-import studentDomen.PersonComparator;
+import comporators.PersonComparator;
 import studentDomen.Student;
 
 /*

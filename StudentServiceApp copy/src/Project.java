@@ -2,15 +2,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import comporators.AverageAge;
+import comporators.PersonComparator;
 import controllers.EmploeeController;
 import studentDomen.Emploee;
-import studentDomen.PersonComparator;
 import studentDomen.Student;
 import studentDomen.StudentGroup;
-// import studentDomen.Teacher;
-// import studentDomen.User;
-import studentDomen.StudentSteam;
 import studentDomen.Teacher;
+import studentDomen.StudentSteam;
 import studentDomen.User;
 
 public class Project {
@@ -33,12 +32,12 @@ public class Project {
         StudentGroup group = new StudentGroup(415, studList);
         ////////////////////////////
 
-        //получить студентов в виде коллекции
+        // получить студентов в виде коллекции
         Collections.sort(group.getStudents());
 
         System.out.println("-------------- after sorting by age --------------");
         for (Student student : group) {
-        System.out.println(student);
+            System.out.println(student);
         }
 
         //// вторая группа
@@ -69,7 +68,7 @@ public class Project {
 
         System.out.println("------- после сортировки------");
         for (StudentGroup students : steam) {
-        System.out.println(students);
+            System.out.println(students);
         }
 
         // System.out.println(steam.toString());
@@ -84,9 +83,12 @@ public class Project {
         com.compare(st2, st3);
 
         PersonComparator<Teacher> com2 = new PersonComparator<Teacher>();
-        Teacher t1 = new Teacher("Иван", " ", 25, "Docent");
-        Teacher t2 = new Teacher("Игорь", " ", 23, "Professor");
+        List<Teacher> teachers = new ArrayList<>();
+        Teacher t1 = new Teacher(15, "Иван", " ", 25, "Docent");
+        Teacher t2 = new Teacher(17, "Игорь", " ", 23, "Professor");
         com2.compare(t1, t2);
+        teachers.add(t1);
+        teachers.add(t2);
 
         PersonComparator<User> comP = new PersonComparator<User>();
         comP.compare(st1, t2);
@@ -110,5 +112,15 @@ public class Project {
          */
         // contr.paySalary(t2);
 
+        System.out.println(comP.compare(t1, t2));
+
+        AverageAge<Student> averAge2 = new AverageAge<>(studList2);
+        System.out.println("Студенты: " + averAge2.toString());
+
+        AverageAge<Teacher> averAgeteach = new AverageAge<Teacher>(teachers);
+        System.out.println("Преподаватели: " + averAgeteach.toString());
+        
     }
+
+    
 }

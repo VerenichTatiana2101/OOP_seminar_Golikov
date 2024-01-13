@@ -1,6 +1,8 @@
-package studentDomen;
+package comporators;
 
 import java.util.Comparator;
+
+import studentDomen.User;
 
 /**
  * PersonComparator

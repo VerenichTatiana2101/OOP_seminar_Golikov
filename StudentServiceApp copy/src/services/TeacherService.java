@@ -4,36 +4,41 @@ import java.util.ArrayList;
 import java.util.List;
 
 import comporators.PersonComparator;
-import studentDomen.Emploee;
+import studentDomen.Teacher;
 
-public class EmploeeService implements iPersonService<Emploee> {
+/**
+ * TeacherService
+ */
+public class TeacherService implements iPersonService<Teacher> {
     private int count;
-    private List<Emploee> emploeeList;
+    private List<Teacher> teachersList;
 
-    public EmploeeService() {
-        this.emploeeList = new ArrayList<Emploee>();
+    public TeacherService() {
+        this.teachersList = new ArrayList<Teacher>();
     }
 
+    // возвращает список студентов
     @Override
-    public List<Emploee> getAll() {
-        return emploeeList;
+    public List<Teacher> getAll() {
+        return teachersList;
     }
 
     // метод создания экземпляра студента
     @Override
     public void create(String firstName, String lastName, int age) {
-        Emploee pers = new Emploee(count, firstName, lastName, age);
+        Teacher pers = new Teacher(count, firstName, lastName, age);
         /*
          * подставляем count чтобы при каждой регистрации студента
          * id автоматически увеличивалось на 1
+         * нужно куда-то переменную сохранять при закрытии программы чтобы работало
          */
         count++;
         // после создания добавляем в общий список студентов б.данных
-        emploeeList.add(pers);
+        teachersList.add(pers);
     }
 
-    public void sortByAgeStudList() {
+    public void sortByAgeTeachersList() {
         // вызовем меторд сортироки и передадим наш ранее созданный компаратор
-        emploeeList.sort(new PersonComparator<Emploee>());
+        teachersList.sort(new PersonComparator<Teacher>());
     }
 }

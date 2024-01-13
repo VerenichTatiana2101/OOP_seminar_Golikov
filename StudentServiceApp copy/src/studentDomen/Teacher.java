@@ -1,23 +1,26 @@
 package studentDomen;
 
-import java.util.UUID;
-
 public class Teacher extends User {
 
-    private UUID id;
+    private int id;
     private String disciplines;
 
-    public Teacher(String firstName, String lastName, int age, String disciplines) {
+    public Teacher(int id, String firstName, String lastName, int age) {
         super(firstName, lastName, age);
-        this.disciplines = disciplines;
-        this.id = UUID.randomUUID();
+        this.id = id;
     }
 
-    public UUID getId() {
+    public Teacher(int id, String firstName, String lastName, int age, String disciplines) {
+        super(firstName, lastName, age);
+        this.disciplines = disciplines;
+        this.id = id;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(int id) {
         this.id = id;
     }
 

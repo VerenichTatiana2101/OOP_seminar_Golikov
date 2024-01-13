@@ -119,6 +119,8 @@ public class Project {
 
         AverageAge<Teacher> averAgeteach = new AverageAge<Teacher>(teachers);
         System.out.println("Преподаватели: " + averAgeteach.toString());
+
+        
         
     }
 

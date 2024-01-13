@@ -1,18 +1,38 @@
-## Getting Started
+# План урока:
+- повторить теорию, пройденную на предыдущем семинаре – полиморфизм, типизация
+- получить практические навыки в использовании обобщений
+- изучить примеры использования обобщений в различных ситуациях
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Задача 1
+- Создать класс Юзер и перенести в него базовые поля ( ФИО )
+- Модифицировать ранее созданный класс СтудентКомпаратор
+- Переименовать в ЮзерКомпаратор
+- Типизировать его T наследующегося от типа Юзер ( T extends User )
+- Типизировать реализуемый интерфейс Компаратор T
+- Изменить метод компаре, внеся во входные данные вместо конкретных
+классов типизацию T
+- Внести правки места, где использовался предыдущий компаратор
 
-## Folder Structure
+## Задача 2
+- Создать интерфейс ЮзерВью
+- Типизировать его T наследующегося от типа Юзер
+- Создать в нем метод sendOnConsole(List<Student> students) используя
+типизацию
+- Создать класс СтудентВью реализующий созданный интерфейс
 
-The workspace contains two folders by default, where:
+## Задача 3
+- Модифицировать ранее созданный класс Контроллер переименовав его в
+StudentController
+- Создайте новый интерфейс UserController
+- Опишите в нем метод create
+- Типизировать его T наследующегося от типа Юзер
+- В классе СтудентКонтроллер реализуйте интерфейс UserController
+- Добавить в методы контроллера вывод в консоль с помощью метода
+sendOnConsole
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Домашнее задание  
+1) Создать класс TeacherService и реализовать аналогично проделанному на семинаре. Подключить обобщенный интерфейс iPersonService. Добавить метод вывода списка учителей отсортированного обобщенным классом PersonComparator
+2) Создать класс TeacherController. Подключить к классу обобщенный интерфейс iPersonController.
+3) Разработать обобщенный класс AverageAge для подсчета среднего возраста студентов, учителей и работников. Вывести результат работы класса на консоль.
+(Задача со *) Переписать иерархию Person->Student/Teacher/Emploee в иерархию обобщенных типов.
+Формат сдачи: ссылка на гитхаб проект

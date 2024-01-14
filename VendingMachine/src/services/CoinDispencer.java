@@ -1,4 +1,4 @@
-package services;
+package VendingMachine.src.services;
 
 public class CoinDispencer {
     private int nominal;

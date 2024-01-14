@@ -1,18 +1,21 @@
-import services.CoinDispencer;
-import services.Display;
-import services.Holder;
-import services.VendingMachine;
-import java.util.List;
+package VendingMachine.src;
+
+import VendingMachine.src.services.VendingMachine;
+import VendingMachine.src.domen.Bottle;
+import VendingMachine.src.domen.HotDrink;
+import VendingMachine.src.domen.Product;
+import VendingMachine.src.services.CoinDispencer;
+import VendingMachine.src.services.Display;
+import VendingMachine.src.services.Holder;
+
 import java.util.ArrayList;
+import java.util.List;
 
-import domen.Bottle;
-import domen.HotDrink;
-import domen.Product;
-
-public class App {
+public class Programm {
     public static void main(String[] args) {
 
         // наполняем автомат списком продуктов
+
         List<Product> assort = new ArrayList<>();
         Product item1 = new Product("Lays", 100, 1);
         Product item2 = new Product("Cola", 50, 2);
@@ -31,16 +34,16 @@ public class App {
         Holder hold1 = new Holder(4, 4);
 
         // создаём диспенсер
-        CoinDispencer dispencer1 = new CoinDispencer(0);
+        CoinDispencer dspFirst = new CoinDispencer(0);
 
         // дисплей
-        Display disp = new Display();
+        Display dsp = new Display();
 
         // центральная фигура это vendingMachine
         // создаем экземпляр этого класса
         // видим что еще нет ни холдера ни ассортимента,
         // выше добавляем
-        VendingMachine vMachine = new VendingMachine(hold1, dispencer1, assort, disp);
+        VendingMachine vMachine = new VendingMachine(hold1, dspFirst, assort, dsp);
 
         // посмотреть, что есть внутри нашей машины
         for (Product prod : vMachine.getProducts()) {

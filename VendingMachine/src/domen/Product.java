@@ -1,4 +1,4 @@
-package domen;
+package VendingMachine.src.domen;
 
 public class Product {
     // поля

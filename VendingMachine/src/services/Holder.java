@@ -1,7 +1,9 @@
-package services;
+package VendingMachine.src.services;
+import VendingMachine.src.domen.Places;
+
 import java.util.List;
 import java.util.ArrayList;
-import domen.Places;
+
 
 public class Holder {
     private List<Places> places;

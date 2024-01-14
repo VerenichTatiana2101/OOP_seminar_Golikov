@@ -1,7 +1,9 @@
-package services;
+package VendingMachine.src.services;
+import VendingMachine.src.domen.Product;
+
 import java.util.List;
 
-import domen.Product;
+
 
 public class VendingMachine {
     private Holder holder;
